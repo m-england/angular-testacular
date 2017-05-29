@@ -20,6 +20,11 @@ export class IdentityService {
               .then(res => {
                 return res.json().results[0] as Identity;
               })
-              .catch(error => console.log(error));
+              .catch(error => this.handleError(error));
+  }
+
+  handleError(error): Promise<Identity> {
+    console.log("Error occured", error);
+    return Promise.reject(error);
   }
 }

@@ -2,7 +2,7 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { IdentityService } from './identity.service';
 
-xdescribe('IdentityService', () => {
+describe('IdentityService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [IdentityService]

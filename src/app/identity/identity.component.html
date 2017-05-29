@@ -1,10 +1,11 @@
 <div class="container is-fullwidth has-text-centered" *ngIf="identity">
-    <h3 class="subtitle is-3">{{identity.name.title}} {{identity.name.first}} {{identity.name.last}}</h3>
-    <img src="{{identity.picture.medium}}" />
-    <p>Gender: {{identity.gender}}</p>
-    <p> </p>
+    <h3 class="subtitle is-3">{{identity.name.title | title}} {{identity.name.first}} {{identity.name.last}}</h3>
+    <img src="{{identity.picture.large}}" />
     <p>{{identity.email}}</p>
-    <p>P: {{identity.cell}}</p>
-    <p>DOB: {{identity.dob}}</p>
+    <p><strong>Phone:</strong> {{identity.cell}}</p>
+    <p><strong>DOB:</strong> {{identity.dob}}</p>
     <p>{{identity.location.street}} {{identity.location.city}} {{identity.location.state}} {{identity.location.postcode}}</p>
+</div>
+<div class="container is-fullwidth has-text-centered" *ngIf="!identity">
+    <h3 class="subtitle is-3">That's probably enough for now</h3>
 </div>

@@ -7,8 +7,7 @@ import { AppConstants } from './app-constants';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  providers: [ IdentityService ]
+  templateUrl: './app.component.html'
 })
 
 export class AppComponent implements OnInit {

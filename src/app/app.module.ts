@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TitlePipe } from './title.pipe';
 import { IdentityComponent } from './identity/identity.component';
+import { IdentityService } from './identity.service';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { IdentityComponent } from './identity/identity.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [IdentityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

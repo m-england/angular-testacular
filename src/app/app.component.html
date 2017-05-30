@@ -13,8 +13,8 @@
 <section class="section has-text-centered">
     <app-identity [identity]="identity"></app-identity>
     <br />
-    <button class="button is-success" *ngIf="identitiesGenerated <= identitiesAllowed" (click)="newIdentity()">Make Another</button>
-    <div class="columns" *ngIf="identitiesGenerated > identitiesAllowed">
+    <button class="button is-success" [disabled]="identitiesGenerated >= identitiesAllowed" (click)="newIdentity()">Make Another</button>
+    <div class="columns" *ngIf="identitiesGenerated >= identitiesAllowed">
         <div class="column is-half is-offset-one-quarter">
             <p class="notification is-warning" id="warning">That's probably enough for now</p>
         </div>

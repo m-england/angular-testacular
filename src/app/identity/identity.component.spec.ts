@@ -1,10 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-
-
 import { IdentityComponent } from './identity.component';
 
-describe('ProfileComponent', () => {
+describe('IdentityComponent', () => {
   let component: IdentityComponent;
   let fixture: ComponentFixture<IdentityComponent>;
 
